@@ -1,8 +1,8 @@
 # gen_711_final_project
 Tess Keating
-# Fetal Microbiota Transplant (FMT) Qiime2 Analysis
+# Fecal Microbiota Transplant (FMT) Qiime2 Analysis
 ## Background
-A bioinformatic pathway analysis was performed using data from a [human microbiome study](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-016-0225-7) and a [Qiime2 tutorial](https://docs.qiime2.org/2024.2/tutorials/fmt/).
+In a study, children with autism and gastrointestinal disorders were treated with fecal microbiota transplants to reduce their symptoms. For eighteen weeks, their microbiomes and severity of their symptoms were weekly monitored through fecal swab and stool samples. Using sequenced data from this [human microbiome study](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-016-0225-7) and a [Qiime2 tutorial](https://docs.qiime2.org/2024.2/tutorials/fmt/), a bioinformatic pathway analysis was performed. In this analysis, raw reads were denoised, sequences were aligned and classified, and phylogenies and diversity metrics were assessed. These bioinformatic techniques were used to generate results in the form of representative figures and visualizations.
 ## Methods
 
 ## Results
