@@ -146,7 +146,35 @@ My [full script](https://github.com/tesskeating/gen_711_final_project/blob/main/
 
 [source for commands below](https://docs.qiime2.org/jupyterbooks/cancer-microbiome-intervention-tutorial/030-tutorial-downstream/070-beta-diversity.html):
 
-- *diversity umap*: 
+- *diversity umap*: reduces dimensions of beta diversity metrics using unweighted and weighted unifrac matrices
+- *metadata tabulate*: tabulates unifrac matrices using diversity values (Faith's phylogenetic diversity, evenness, and Shannon diversity)
+- *taxa barplot*: makes taxonomy barplot
+- *emperor plot*: plots umap and pcoa data from beta diversity unifrac matrices
+
+[source for commands below](https://docs.qiime2.org/jupyterbooks/cancer-microbiome-intervention-tutorial/030-tutorial-downstream/080-longitudinal.html):
+
+- *taxa collapse*: adds taxa to feature table
+- *feature-table filter-features-conditionally*: filters abundance of genera in feature table
+- *feature-table relative-frequency*: converts counts in filtered feature table to relative frequencies
+- *longitudinal volatility*: makes longitudinal volatility plot using metadata, diversity metrics, and taxa and relative frequencies from table
+- *longitudinal feature-volatility*: makes volatility control plot to identify features that change over time
+
+</details>
+
+<details>
+
+<summary>
+
+### Other Notes
+
+</summary>
+
+- *git clone*: clones github repo into new directory
+- *git add*: adds all directories and files in project directory
+- *git commit*: saves changes to local repo
+- *git push*: uploads content in local repo to github repo
+###
+I downloaded any qzv files that I wanted to view to my desktop and [uploaded to Qiime](https://view.qiime2.org/).
 
 </details>
 
