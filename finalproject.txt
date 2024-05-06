@@ -269,6 +269,12 @@ qiime longitudinal feature-volatility \
 
 
 
+*cloning and pushing github repo:
+git clone https://github.com/tesskeating/gen_711_final_project.git
+git add .
+git commit -m "commit"
+git push
+
 (https://view.qiime2.org/)
 *visualizing data:
 download files to desktop and upload to qiime
