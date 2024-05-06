@@ -188,13 +188,13 @@ I downloaded any qzv files that I wanted to view to my desktop and [uploaded to 
 
 </summary>
 
-Below are examples of visualizations that can be generated using the 5 methods above.
+Below are examples of visualizations that can be generated using the methods above.
 
 <details>
 
 <summary>
 
-### Obtaining, Denoising, and Merging Data Visualizations
+### Sequence Quality and Features Visualizations
 
 </summary>
 
@@ -202,10 +202,22 @@ Below are examples of visualizations that can be generated using the 5 methods a
 
 This histogram shows the sequence quality of each forward read input. It helps determine the minimum sequence quality prior to denoising, which filters the sequences and removes reads that have too much noise. In this case, the minimum demultiplexed sequence count is 1208.
 
+command used: *demux summarize* from 
+
 <br/>
 
 <br/>
 
 ![image](https://github.com/tesskeating/gen_711_final_project/assets/157992900/46ef71eb-d93e-41a8-9af3-81d8b7dc5eb0)
 
-This is part of a merged table containing each feature's sequence and sequence length. It shows the first 5 feature sequences, the total being 799. The important thing to pay attention to here is the length of each sequence, as they should all be the same length for alignment and, later, taxonomic assignment. Aligning sequences of the same length is not only easier, but is more effective in identifying sequence similarities for constructing phylogenetic trees. If I scroll down this table, I can see that all 799 sequences are 137 basepairs, which means that they are ready to be aligned.
+This is part of a merged table containing each feature's sequence and sequence length. It shows the first 5 feature sequences, the total being 799. The important thing to pay attention to here is the length of each sequence, as they should all be the same length for alignment and, later, taxonomic assignment. Aligning sequences of the same length is not only easier, but is more effective in identifying sequence similarities for constructing phylogenetic trees. If I scroll down this table, I can see that all 799 sequences are 137 basepairs long, which means that they are ready to be aligned.
+
+command used: *feature-table tabulate seqs*
+
+</details>
+
+<details>
+
+<summary>
+
+###  Visualization
