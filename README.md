@@ -187,3 +187,17 @@ I downloaded any qzv files that I wanted to view to my desktop and [uploaded to 
 ## Results
 
 </summary>
+
+Below are examples of visualizations that can be generated from each of the 5 methods above.
+
+<details>
+
+<summary>
+
+### Obtaining, Denoising, and Merging Data Visualizations
+
+</summary>
+
+![image](https://github.com/tesskeating/gen_711_final_project/assets/157992900/7c1d8399-e463-4395-a55e-dcf27d783cb6)
+
+This is
