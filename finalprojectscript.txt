@@ -2,6 +2,8 @@ FINAL PROJECT SCRIPT:
 
 
 
+
+OBTAINING, DENOISING, AND MERGING DATA:
 (https://docs.qiime2.org/2024.2/tutorials/fmt/)
 *obtaining initial data:
 mkdir -p ~/raw_data
@@ -78,6 +80,8 @@ qiime feature-table tabulate-seqs
 
 
 
+
+ALIGNING SEQUENCES:
 (https://docs.qiime2.org/2022.2/tutorials/phylogeny/#sequence-alignment)
 *aligning and masking sequences:
 mkdir -p ~/aligned_seqs
@@ -90,6 +94,8 @@ qiime alignment mask \
 
 
 
+
+CLASSIFYING SEQUENCES:
 (https://docs.qiime2.org/2024.2/tutorials/feature-classifier/) (https://zenodo.org/records/6395539#.ZGE7pHbMJhE)
 *classifying sequences:
 mkdir -p ~/taxonomic_class
@@ -106,6 +112,8 @@ qiime metadata tabulate \
 
 
 
+
+MAKING PHYLOGENETIC TREE:
 (https://docs.qiime2.org/2024.2/tutorials/phylogeny/#fasttree)
 *making tree:
 mkdir -p ~/phylo_tree
@@ -141,6 +149,8 @@ qiime empress community-plot \
 
 
 
+
+ASSESSING DIVERSITY METRICS:
 (https://docs.qiime2.org/2024.2/tutorials/filtering/)
 *filtering metadata:
 qiime feature-table filter-samples \
@@ -199,7 +209,7 @@ qiime diversity umap \
     --i-distance-matrix div_metrics/weighted_unifrac_distance_matrix.qza \
     --o-umap div_metrics/wu-umap.qza
 
-*viewing unifrac matrics:
+*viewing unifrac matrices:
 qiime metadata tabulate \
     --m-input-file raw_data/sample_metadata.tsv div_metrics/uu-umap.qza div_metrics/faith_pd_vector.qza div_metrics/evenness_vector.qza div_metrics/shannon_vector.qza \
     --o-visualization div_metrics/expanded-metadata.qzv
@@ -269,7 +279,9 @@ qiime longitudinal feature-volatility \
 
 
 
-*cloning and pushing github repo:
+
+OTHER NOTES:
+*cloning repo and pushing to github:
 git clone https://github.com/tesskeating/gen_711_final_project.git
 git add .
 git commit -m "commit"
