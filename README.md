@@ -9,7 +9,7 @@ Tess Keating
 
 </summary>
 
-In a [human microbiome study](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-016-0225-7) by Kang et al., children with autism and gastrointestinal disorders were treated with fecal microbiota transplants to reduce their symptoms. For eighteen weeks, their microbiomes and severity of their symptoms were weekly monitored through fecal swab and stool samples. Using sequenced data from this study and a [Qiime2 tutorial](https://docs.qiime2.org/2024.2/tutorials/fmt/), a bioinformatic pathway analysis was performed. In this analysis, raw reads were denoised, sequences were aligned and classified, and phylogenies and diversity metrics were assessed. These bioinformatic techniques were used to generate results in the form of representative figures and visualizations.
+In a [human microbiome study](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-016-0225-7) by Kang et al., children with autism and gastrointestinal disorders were treated with fecal microbiota transplants to reduce their symptoms. For eighteen weeks, their microbiomes and severity of their symptoms were monitored through fecal swab and stool samples. Using sequenced data from this study and a [Qiime2 tutorial](https://docs.qiime2.org/2024.2/tutorials/fmt/), a bioinformatic pathway analysis was performed. In this analysis, raw reads were denoised, sequences were aligned and classified, and phylogenies and diversity metrics were assessed. These bioinformatic techniques were used to generate results in the form of representative figures and visualizations.
 
 </details>
 
@@ -21,15 +21,19 @@ In a [human microbiome study](https://microbiomejournal.biomedcentral.com/articl
 
 </summary>
 
+My [full script](https://github.com/tesskeating/gen_711_final_project/blob/main/finalprojectscript.txt) contains all commands that I used for this project. It is organized into the same headers that I used below. Under each header below is a brief discription of the commands that I ran.
+
 <details>
 
 <summary>
 
-### Obtaining, Denoising, and Merging Data
+### 1. Obtaining, Denoising, and Merging Data
 
 </summary>
 
 Qiime Comands:
+
+[source](https://docs.qiime2.org/2024.2/tutorials/fmt/)
 
 - *wget*: obtains initial data files (sample metadata and 10% subsample data)
 - *demux summarize*: plots sequence quality to assess reads before denoising
@@ -43,11 +47,17 @@ Qiime Comands:
 - *feature-table summarize*: tabulates and plots frequency stats
 - *feature-table tabulate-seqs*: gives merged table with sequence lengths of each feature
 
+</details>
+
 <details>
 
-<summary>Script:</summary>
+<summary>
 
-</details>
+### 2. Aligning Sequences
+
+</summary>
+
+hi
 
 </details>
 
