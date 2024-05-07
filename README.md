@@ -83,9 +83,9 @@ My [full script](https://github.com/tesskeating/gen_711_final_project/blob/main/
 
 [source for commands below](https://docs.qiime2.org/2024.2/tutorials/feature-classifier/):
 
-- *wget*: obtains 16s rRNA human stool classifier (not included in repo because file was too big to push)
+- *wget*: obtains 16s rRNA human stool classifier from silva database (not included in repo because file was too big to push)
 - *feature-classifier classify-sklearn*: assigns taxonomy to rep sequences
-- *metadata tabulate*: tabulates taxon and confidence of each feature
+- *metadata tabulate*: tabulates taxa and confidence of each feature
 
 </details>
 
@@ -188,7 +188,7 @@ I downloaded any qzv files that I wanted to view to my desktop and [uploaded to 
 
 </summary>
 
-Below are examples of visualizations that can be generated using the methods above.
+Below are examples of visualizations that can be generated using the methods in the previous section.
 
 <details>
 
@@ -202,7 +202,7 @@ Below are examples of visualizations that can be generated using the methods abo
 
 This histogram shows the sequence quality of each forward read input. It helps determine the minimum sequence quality prior to denoising, which filters the sequences and removes reads that have too much noise. In this case, the minimum demultiplexed sequence count is 1208.
 
-command used: *demux summarize* from 
+command used: *demux summarize* from Obtaining, Denoising, and Merging Data
 
 <br/>
 
@@ -210,9 +210,9 @@ command used: *demux summarize* from
 
 ![image](https://github.com/tesskeating/gen_711_final_project/assets/157992900/46ef71eb-d93e-41a8-9af3-81d8b7dc5eb0)
 
-This is part of a merged table containing each feature's sequence and sequence length. It shows the first 5 feature sequences, the total being 799. The important thing to pay attention to here is the length of each sequence, as they should all be the same length for alignment and, later, taxonomic assignment. Aligning sequences of the same length is not only easier, but is more effective in identifying sequence similarities for constructing phylogenetic trees. If I scroll down this table, I can see that all 799 sequences are 137 basepairs long, which means that they are ready to be aligned.
+This is part of a merged table with each feature's sequence and sequence length. It shows the first five feature sequences, the total being 799. The important thing to pay attention to here is the length of each sequence, as they should all be the same length for alignment and, later, taxonomic assignment. Aligning sequences of the same length is not only easier, but is more effective in identifying sequence similarities for constructing phylogenetic trees. If I scroll down this table, I can see that all 799 sequences are 137 basepairs long, which means that they are ready to be aligned.
 
-command used: *feature-table tabulate seqs*
+command used: *feature-table tabulate seqs* from Obtaining, Denoising, and Merging Data
 
 </details>
 
@@ -220,4 +220,74 @@ command used: *feature-table tabulate seqs*
 
 <summary>
 
-###  Visualization
+### Taxa Visualization
+
+</summary>
+
+![image](https://github.com/tesskeating/gen_711_final_project/assets/157992900/559a0bfb-61b7-47ba-ba93-f95ee16d128b)
+
+This is the first five rows of a table containing the taxa and confidence of each feature. These taxonomic assignments resulted from aligning the sequences and incorporating a 16s rRNA classifier. This table is helpful for comparing the corresponding taxa of each feature, and this data will be used to create a phylogenetic tree.
+
+command used: *metadata tabulate* from Classifying Sequences
+
+</details>
+
+<details>
+
+<summary>
+
+### Phylogenetic Tree Visualization
+
+</summary>
+
+![image](https://github.com/tesskeating/gen_711_final_project/assets/157992900/407e5cf6-182c-439d-996a-376e0ee7274d)
+
+This phylogenetic tree shows the relationships between taxa and was generated using a silva 16s rRNA classifier. The branches in the center of this circular plot are color coded by taxonomic class, and the outer layer is colored by treatment group. The control is in red, the treatment is in orange, and the donor is in blue. A phylogeny like this gives insight into the commonalities of different taxa and how they have evolved.
+
+command used: *empress community-plot* from Making Phylogenetic Tree
+
+</details>
+
+<details>
+
+<summary>
+
+### Alpha Rarefaction and Diversity Visualizations
+
+</summary>
+
+![image](https://github.com/tesskeating/gen_711_final_project/assets/157992900/90cf1758-3448-4001-8474-8816eb104f78)
+
+This is an alpha rarefaction plot that shows how sequence depth affects Faith's phylogenetic diversity, which is one of the diversity metrics that was used for this analysis. The control is in dark blue and the treatment is in light blue. A sequence depth of 876 was chosen after filtering the samples and viewing the minimum frequency. This graph is used to make sure that this depth is high enough to hold most of the diversity in the samples. This means that the diversity metric should stabilize lower than the chosen depth of coverage. In this case, Faith's pd stabilizes around 500, indicating that the majority of diversity was contained and there is still room to further analyze the diversity metrics.
+
+command used: *diversity alpha-rarefaction* from Assessing Diversity Metrics
+
+<br/>
+
+<br/>
+
+![image](https://github.com/tesskeating/gen_711_final_project/assets/157992900/f86a4179-2de3-4dc1-8509-118f4c061a19)
+
+This boxplot shows the treatment group vs observed features, which is the alpha diversity metric. This plot shows species abundance and diversity.
+
+command used: *diversity alpha-group-significance* from Assessing Diversity Metrics
+
+<br/>
+
+<br/>
+
+![image](https://github.com/tesskeating/gen_711_final_project/assets/157992900/ee3f1b37-bdff-4e14-a3d4-1b401ac17f7d)
+
+This regression scatter plot shows how the number of weeks and treatment group affect the observed features metric. Looking at the graph, there is a slight positive correlation between weekly treatment and observed features. This means that the treatment group will have more diversity as time progresses.
+
+command used: *longitudinal linear-mixed-effects* from Assessing Diversity Metrics
+
+</details>
+
+<details>
+
+<summary>
+
+### Beta Diversity Visualizations
+
+</summary>
