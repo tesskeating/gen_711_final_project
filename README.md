@@ -268,7 +268,7 @@ command used: *diversity alpha-rarefaction* from Assessing Diversity Metrics
 
 ![image](https://github.com/tesskeating/gen_711_final_project/assets/157992900/f86a4179-2de3-4dc1-8509-118f4c061a19)
 
-This boxplot shows the treatment group vs observed features, which is the alpha diversity metric. This plot shows species abundance and diversity.
+This boxplot shows the treatment group vs observed features, which is the alpha diversity metric. This plot shows species richness and diversity.
 
 command used: *diversity alpha-group-significance* from Assessing Diversity Metrics
 
