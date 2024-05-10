@@ -288,6 +288,74 @@ command used: *longitudinal linear-mixed-effects* from Assessing Diversity Metri
 
 <summary>
 
-### Beta Diversity Visualizations
+### Beta Diversity Visualization
 
 </summary>
+
+![image](https://github.com/tesskeating/gen_711_final_project/assets/157992900/f6047523-246c-4692-bb2e-da3b28e3cd20)
+
+This umap plot shows the unweighted beta diversity unifrac matrices. Each color represents a subject and each shape represents a sample method. The spheres represent stools and the diamonds represent swabs. The subjects are grouped near their own sample types. This plot is useful for visualizing beta diversity unifrac data and examining differences between samples.
+
+command used: *emeror plot* from Assessing Diversity Metrics
+
+</details>
+
+<details>
+
+<summary>
+
+### Volatility Control Visualization
+
+</summary>
+
+![image](https://github.com/tesskeating/gen_711_final_project/assets/157992900/eeb8d827-eb26-49ee-923f-60e7e2047d68)
+
+This is a volatility control plot that shows features that are associated with changes over time. In this case, the metric is families of bacteria, and the orange line is control and the blue line is treatment. Looking at the graph, the groups of bacteria within each sample changed over the 18 week period and in different ways. For example, the organisms from the control group peaked at 8 weeks, and the treated organisms peaked at 18 weeks. Comparisons like these can be made at the taxonomic and genus levels as well if matched using the same method.
+
+command used: *longitudinal feature-volatility* from Assessing Diversity Metrics
+
+</details>
+
+</details>
+
+<details>
+
+<summary>
+
+## Conclusions and Sources
+
+</summary>
+
+The main issues that I ran into while working on this project had to do with getting the empress command and pushing from my local repo to my github repo. I spent a while trying to figure out how to install empress on my laptop so that I could use it on vscode when qiime was activated. It only worked when I used the empress conda environment that Kaleb made. I also forgot to initially connect my github repo to my local one in vscode, so I was unable to run *git remote add origin*. It took a lot of trial and error, but I ended up having to clone my github repo into a new directory in vscode, transfer the files from my original project directory to the new one, and then push to github.
+
+<br/>
+
+All sources that I used for this project are listed below.
+
+Kang, DW., Adams, J.B., Gregory, A.C. et al. Microbiota Transfer Therapy alters gut ecosystem and improves gastrointestinal and autism symptoms: an open-label study. Microbiome 5, 10 (2017). https://doi.org/10.1186/s40168-016-0225-7
+
+https://docs.qiime2.org/2024.2/tutorials/fmt/
+
+https://docs.qiime2.org/2022.2/tutorials/phylogeny/#sequence-alignment
+
+https://zenodo.org/records/6395539#.ZGE7pHbMJhE
+
+https://docs.qiime2.org/2024.2/tutorials/feature-classifier/
+
+https://docs.qiime2.org/2024.2/tutorials/phylogeny/#fasttree
+
+https://library.qiime2.org/plugins/empress/32/
+
+https://github.com/biocore/empress#tutorial-using-empress-in-qiime-2
+
+https://docs.qiime2.org/2024.2/tutorials/filtering/
+
+https://docs.qiime2.org/jupyterbooks/cancer-microbiome-intervention-tutorial/030-tutorial-downstream/040-even-sampling.html
+
+https://docs.qiime2.org/jupyterbooks/cancer-microbiome-intervention-tutorial/030-tutorial-downstream/050-core-metrics.html
+
+https://docs.qiime2.org/jupyterbooks/cancer-microbiome-intervention-tutorial/030-tutorial-downstream/060-alpha-diversity.html
+
+https://docs.qiime2.org/jupyterbooks/cancer-microbiome-intervention-tutorial/030-tutorial-downstream/070-beta-diversity.html
+
+https://docs.qiime2.org/jupyterbooks/cancer-microbiome-intervention-tutorial/030-tutorial-downstream/080-longitudinal.html
